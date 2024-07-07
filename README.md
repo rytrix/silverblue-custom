@@ -79,3 +79,8 @@ This provides users a method of verifying the image.
     ```
 
 4. Commit the `cosign.pub` file into your git repository
+
+# To rebase to this image
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/rytrix/silverblue-custom:latest
+
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/rytrix/silverblue-custom:latest
