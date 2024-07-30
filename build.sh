@@ -13,9 +13,9 @@ RELEASE="$(rpm -E %fedora)"
 
 rpm-ostree install \
     gnome-themes-extra \
-    btop \
+    btop htop \
     kitty alacritty tilix \
-    neovim zsh git tldr zoxide \
+    neovim emacs zsh git tldr zoxide \
     fastfetch \
     virt-manager
 
