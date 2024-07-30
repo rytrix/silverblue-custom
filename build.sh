@@ -18,5 +18,3 @@ rpm-ostree install \
     neovim emacs zsh git tldr zoxide \
     fastfetch \
     virt-manager
-
-flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
