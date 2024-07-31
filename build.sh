@@ -17,4 +17,5 @@ rpm-ostree install \
     kitty alacritty tilix \
     neovim emacs zsh git tldr zoxide \
     fastfetch \
-    virt-manager
+    virt-manager \
+    powertop 
