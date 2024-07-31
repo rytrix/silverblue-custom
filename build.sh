@@ -11,16 +11,10 @@ RELEASE="$(rpm -E %fedora)"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-rpm-ostree override remove \
-    firefox firefox-langpacks \
-    toolbox
-
 rpm-ostree install \
     gnome-themes-extra \
-    btop \
+    btop htop \
     kitty alacritty tilix \
-    neovim zsh git tldr zoxide \
-    fastfetch neofetch \
+    neovim emacs zsh git tldr zoxide \
+    fastfetch \
     virt-manager
-
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
