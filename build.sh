@@ -17,4 +17,7 @@ rpm-ostree install \
     kitty alacritty tilix \
     neovim emacs zsh git tldr zoxide \
     fastfetch \
-    powertop 
+    powertop \
+    virt-manager 
+
+sudo systemctl enable libvirtd
