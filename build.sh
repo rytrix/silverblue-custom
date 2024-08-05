@@ -15,7 +15,7 @@ rpm-ostree install \
     gnome-themes-extra \
     btop htop \
     kitty alacritty tilix \
-    neovim emacs zsh git tldr zoxide \
+    neovim zsh git tldr zoxide \
     fastfetch \
     powertop \
     virt-manager 
