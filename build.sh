@@ -18,6 +18,7 @@ rpm-ostree install \
     neovim zsh git tldr zoxide \
     fastfetch \
     powertop \
-    virt-manager 
+    virt-manager \
+    brightnessctl gammastep mako polkit-gnome pulseaudio-utils slurp sway waybar wofi
 
 sudo systemctl enable libvirtd
