@@ -11,6 +11,8 @@ RELEASE="$(rpm -E %fedora)"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
+rpm-ostree override remove firefox firefox-langpacks
+
 rpm-ostree install \
     gnome-themes-extra \
     btop htop \
