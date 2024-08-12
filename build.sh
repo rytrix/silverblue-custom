@@ -15,12 +15,10 @@ rpm-ostree override remove firefox firefox-langpacks
 
 rpm-ostree install \
     gnome-themes-extra \
-    btop htop \
-    kitty alacritty tilix \
-    neovim zsh git tldr zoxide \
-    fastfetch \
+    kitty alacritty \
+    neovim zsh git \
     powertop \
     virt-manager \
-    brightnessctl gammastep mako polkit-gnome pulseaudio-utils slurp sway waybar wofi
+    # brightnessctl gammastep mako polkit-gnome pulseaudio-utils slurp sway waybar wofi hyprlock
 
 sudo systemctl enable libvirtd
