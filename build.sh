@@ -20,6 +20,8 @@ rpm-ostree install \
     powertop \
     virt-manager \
     clamav rkhunter lynis \
-    brightnessctl gammastep mako polkit-gnome pulseaudio-utils slurp sway waybar wofi NetworkManager-tui
+    tuned tuned-utils tuned-profiles-atomic tuned-gtk tuned-switcher \
+    brightnessctl gammastep mako polkit-gnome pulseaudio-utils slurp sway waybar wofi NetworkManager-tui 
 
 sudo systemctl enable libvirtd
+sudo systemctl enable tuned
