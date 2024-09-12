@@ -17,10 +17,9 @@ rpm-ostree install \
     gnome-themes-extra \
     kitty alacritty \
     neovim zsh git \
-    powertop \
     virt-manager \
     clamav rkhunter lynis \
-    tuned tuned-utils tuned-profiles-atomic tuned-gtk tuned-switcher \
+    powertop tuned tuned-utils tuned-profiles-atomic tuned-gtk tuned-switcher \
     brightnessctl gammastep mako polkit-gnome pulseaudio-utils slurp sway waybar wofi NetworkManager-tui 
 
 sudo systemctl enable libvirtd
