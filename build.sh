@@ -33,3 +33,6 @@ systemctl --global disable flatpak-user-update.timer
 # Swapping to tuned since it is comparable to tlp and much better than power profiles daemon
 systemctl mask power-profiles-daemon
 systemctl enable tuned
+
+# Faster boots
+systemctl disable NetworkManager-wait-online.service
