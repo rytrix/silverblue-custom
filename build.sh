@@ -26,9 +26,9 @@ rpm-ostree install \
 systemctl enable libvirtd
 
 # Disable automatic updates (I consider random password prompts to be a security risk)
-systemctl enable rpm-ostreed-automatic.timer
-systemctl enable flatpak-system-update.timer
-systemctl --global enable flatpak-user-update.timer
+systemctl disable rpm-ostreed-automatic.timer
+systemctl disable flatpak-system-update.timer
+systemctl --global disable flatpak-user-update.timer
 
 # Swapping to tuned since it is comparable to tlp and much better than power profiles daemon
 systemctl mask power-profiles-daemon
