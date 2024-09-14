@@ -22,7 +22,13 @@ rpm-ostree install \
     powertop tuned tuned-utils tuned-profiles-atomic tuned-gtk tuned-switcher \
     brightnessctl gammastep mako polkit-gnome pulseaudio-utils slurp sway waybar wofi NetworkManager-tui 
 
-sudo systemctl enable libvirtd
+systemctl enable libvirtd
 
-sudo systemctl mask power-profiles-daemon
-sudo systemctl enable tuned
+# Disable automatic updates (I consider random password prompts to be a security risk)
+systemctl enable rpm-ostreed-automatic.timer
+systemctl enable flatpak-system-update.timer
+systemctl --global enable flatpak-user-update.timer
+
+# Swapping to tuned since it is comparable to tlp and much better than power profiles daemon
+systemctl mask power-profiles-daemon
+systemctl enable tuned
