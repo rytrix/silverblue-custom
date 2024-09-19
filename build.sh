@@ -11,15 +11,28 @@ RELEASE="$(rpm -E %fedora)"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-rpm-ostree override remove firefox firefox-langpacks
+# Slow updates
+rpm-ostree override remove firefox firefox-langpacks 
 
 rpm-ostree install \
     gnome-themes-extra \
     kitty alacritty \
     neovim zsh git \
-    powertop \
     virt-manager \
     clamav rkhunter lynis \
-    # brightnessctl gammastep mako polkit-gnome pulseaudio-utils slurp sway waybar wofi NetworkManager-tui
+    powertop tuned tuned-utils tuned-profiles-atomic tuned-gtk tuned-switcher \
+    # brightnessctl gammastep mako polkit-gnome pulseaudio-utils slurp sway waybar wofi NetworkManager-tui 
 
-sudo systemctl enable libvirtd
+systemctl enable libvirtd
+
+# Disable automatic updates (I consider random password prompts to be a security risk)
+systemctl disable rpm-ostreed-automatic.timer
+systemctl disable flatpak-system-update.timer
+systemctl --global disable flatpak-user-update.timer
+
+# Swapping to tuned since it is comparable to tlp and much better than power profiles daemon
+systemctl mask power-profiles-daemon
+systemctl enable tuned
+
+# Faster boots
+systemctl disable NetworkManager-wait-online.service
